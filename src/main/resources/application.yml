@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://photobooth.c96weyem0qmo.ap-northeast-2.rds.amazonaws.com:3306/photoboothdb
+    username: admin
+    password: photobooth!
+
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hbm2ddl.auto: create
+      format_sql: true
+      use_sql_comments: true
+      naming:
+        physical-strategy: com.aaa.admin.config.NamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      defer-datasource-initialization: true
